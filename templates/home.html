@@ -1,0 +1,199 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+          background-image: url('static/images/c.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          z-index : -1;
+        }
+        .topnav{
+           // background-color:orange;
+        }
+        .row{
+             //background-color : red;
+        }
+        .card-body{
+             //background-color : #ccffff;
+        }
+        input{
+            width : 200px;
+        }
+        select{
+            width : 200px;
+            height:30px;
+        }
+        .divtag{
+            width:60%;
+        }
+        .prev5{
+        width : 300px;
+        }
+    </style>
+    <title>First Innings Score Predictor</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <div class="topnav">
+        <div class="topnav-centered">
+            <a href="https://github.com/akd15102091?tab=repositories" target="_blank" class="active"><h3>IPL-FIRST-INNING-SCORE-PREDCTION-APP</h3></a>
+        </div>
+    </div>
+    <br>
+    <center>
+        <div id="carouselExampleIndicators" class="carousel slide divtag" data-ride="carousel ">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active abc">
+              <img class="d-block w-100" src="static/images/6.jpeg" alt="First slide"  height="300" >
+            </div>
+            <div class="carousel-item abc" >
+              <img class="d-block w-100" src="static/images/2.jpeg" alt="Second slide"  height="300">
+            </div>
+            <div class="carousel-item abc">
+              <img class="d-block w-100" src="static/images/3.jpeg" alt="Third slide"  height="300">
+            </div>
+              <div class="carousel-item abc">
+              <img class="d-block w-100" src="static/images/4.jpeg" alt="Fourth slide"  height="300">
+            </div>
+              <div class="carousel-item abc">
+              <img class="d-block w-100" src="static/images/1.jpeg" alt="Fifth slide"  height="300">
+            </div>
+              <div class="carousel-item abc">
+              <img class="d-block w-100" src="static/images/7.jpeg" alt="Seventh slide"  height="300">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+    </div>
+        <br>
+        <h2>Enter Details (for predction of first inning) ---</h2>
+    </center>
+    <br><br>
+    <div class="container">
+        <form action="\predict" method="post">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- Batting Team Dropdown -->
+                    <select class="form-input align-center" name="batting-team"required="required">
+                        <option value="none">--- Select a Batting team ---</option>
+                        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                        <!-- Batting Team Dropdown -->
+                    <select class="form-input align-center" name="bowling-team"required="required">
+                        <option value="none">--- Select a Batting team ---</option>
+                        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    </select>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <input type="text" name="overs" placeholder="Overs(>=5.0) eg- 7.2" required="required" />
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" name="runs" placeholder="eg- 70" required="required" />
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" name="wickets" placeholder="eg- 2" required="required" />
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <input class="prev5" type="text" name="runsprev5over" placeholder="Runs scored in previous 5 overs eg- 45" required="required" />
+                </div>
+                <div class="col-sm-6">
+                    <input class="prev5" type="text" name="wicketsprev5over" placeholder="Wickets taken in previous 5 overs eg- 2" required="required" />
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+
+        <br>
+        <br>
+        <h3 style="color : white">{{ prediction_text }}</h3>
+
+        <br>
+        <br>
+        <p>©AKD</p>
+
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
