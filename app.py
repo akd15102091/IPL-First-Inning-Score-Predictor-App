@@ -150,7 +150,7 @@ def predict():
         if (runsprev5over > runs):
             return render_template('home.html', prediction_text="current runs can not be less then prev 5 overs runs")
 
-        output=round(prediction[0],2)
+        output=int(prediction[0])
 
         return render_template('home.html',prediction_text="Predicted score :  {}".format(output))
 
