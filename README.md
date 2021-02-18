@@ -5,4 +5,4 @@ This application tell us about the predicted score for first inning by giving la
 The App Link :    https://ipl-score-prediction-akd-app.herokuapp.com/
 
 some images of Application : 
-https://github.com/akd15102091/IPL-First-Inning-Score-Predictor-App /blob/[branch]/image.jpg?raw=true
+https://user-images.githubusercontent.com/61588604/108326176-f6ff9700-71ef-11eb-982d-de0ffe7bf66e.mp4
