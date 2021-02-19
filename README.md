@@ -34,7 +34,7 @@ Journey :
     
     -then I used one-hot-encoding for "bat_team" and "bowl_team" columns.
     
-**3) Model building ** : 
+**3) Model building** : 
 
     a) split the dataset into X(independent features) and y(dependent features) .
     
